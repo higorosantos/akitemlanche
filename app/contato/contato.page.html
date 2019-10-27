@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>contato</ion-title>
-  </ion-toolbar>
+  <ion-toolbar color="tertiary">
+  <ion-title>Entre em contato</ion-title>
+</ion-toolbar>
 </ion-header>
+ 
+<ion-content >
+  <ion-item>
+    <ion-label>Nome: </ion-label>
+      <ion-input type="text" [(ngModel)]="nome" required></ion-input>
+    </ion-item>
 
-<ion-content>
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email"   [(ngModel)]="email" required></ion-input>
+    </ion-item>
 
+      <ion-item>
+      <ion-label>Assunto: </ion-label>
+      <ion-input type="text"  [(ngModel)]="assunto"   required></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+      <ion-label>Descriçao: </ion-label>
+      <ion-textarea type="text"  [(ngModel)]="desc"  required></ion-textarea>
+      </ion-item>
+
+
+    <ion-item>
+      <ion-button (click)="submitForm()">Enviar</ion-button>
+    </ion-item>
+ 
 </ion-content>
