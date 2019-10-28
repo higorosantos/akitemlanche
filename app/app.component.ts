@@ -18,7 +18,7 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
+      title: 'Lanchonetes',
       url: '/list',
       icon: 'list'
     },
@@ -31,6 +31,11 @@ export class AppComponent {
       title: 'Quem Somos',
       url: '/dev',
       icon: 'people'
+    },
+    {
+      title: 'Políticas de Privacidade',
+      url: '/politicas',
+      icon: 'book'
     }
   ];
 
