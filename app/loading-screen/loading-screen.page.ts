@@ -20,7 +20,7 @@ export class LoadingScreenPage implements OnInit {
 
 tempo = setTimeout(()=> {
   this.router.navigate(["home"])
-}, 4000);
+}, 1000);
   
 }
 

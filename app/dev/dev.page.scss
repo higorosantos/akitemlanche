@@ -2,34 +2,39 @@
     padding: 0px;
     
     width:15x;
-    border-style: solid;
-    border-color: #111;
+    border:solid, rgb(0, 99, 228), 2px;
  
     
 }
-.fotinha img{
-    border-radius: 500px;
-    border-style: solid;
-    border-color: #111;
-   
- 
+
+ion-avatar{
+        width:100% !important;  
+        height : 100% !important;  
+        max-width: 300px !important;  //any size
+        max-height: 250px !important; //any size 
+        border: solid black 2px;
+        }
+
+ion-card{
+
+    background-color: rgb(227, 237, 250);
 }
+
 h1{
    color: black !important ;
 }
+
 p{
     
-    border-style: solid;
-    border-color: black;
-    border-radius: 35px;
-    color:#fff;
+    border:solid rgb(197, 222, 255) 2px;
+    border-radius: 10px;
+    color:black;
     padding: 10px;
-    background-color: rgb(29, 108, 255);
+    background-color: rgb(227, 237, 250);
     
  
 }
 
-
-ion-row{
-    
-}
+h3{
+    color: black !important ;
+ }
