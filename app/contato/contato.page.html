@@ -5,23 +5,33 @@
 </ion-header>
  
 <ion-content >
+<ion-card>
+  <ion-card-header>
+  <ion-card-subtitle>Nos Dê Seu Feedback</ion-card-subtitle>
+  <ion-card-title>FALE CONOSCO!</ion-card-title>
+  </ion-card-header>
+
   <ion-item>
+      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
     <ion-label>Nome: </ion-label>
       <ion-input type="text" [(ngModel)]="nome" required></ion-input>
     </ion-item>
 
     <ion-item>
+        <ion-icon slot="start" color="medium" name="at"></ion-icon>
       <ion-label>Email: </ion-label>
       <ion-input type="email"   [(ngModel)]="email" required></ion-input>
     </ion-item>
 
       <ion-item>
+          <ion-icon slot="start" color="medium" name="document"></ion-icon>
       <ion-label>Assunto: </ion-label>
       <ion-input type="text"  [(ngModel)]="assunto"   required></ion-input>
       </ion-item>
 
 
       <ion-item>
+          <ion-icon slot="start" color="medium" name="text"></ion-icon>
       <ion-label>Descriçao: </ion-label>
       <ion-textarea type="text"  [(ngModel)]="desc"  required></ion-textarea>
       </ion-item>
@@ -32,4 +42,5 @@
       <ion-button [routerLink]="['/home']">Voltar</ion-button>
     </ion-item>
  
+</ion-card>
 </ion-content>
