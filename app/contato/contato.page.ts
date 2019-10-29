@@ -8,11 +8,13 @@ import { Router } from '@angular/router';
   templateUrl: './contato.page.html',
   styleUrls: ['./contato.page.scss'],
 })
+//se der ruim troca a url pelo localhost
 export class ContatoPage implements OnInit {
   nome: String;
   email:String;
   assunto: String;
   desc: String;
+  url : String = "18.231.120.151";
   private loading;
 
   constructor(public Nav: NavController, public Loading: LoadingController,public Alert: AlertController,public rota: Router) { }
@@ -37,7 +39,7 @@ export class ContatoPage implements OnInit {
 
        }
     };     
-    eemail.open("GET",`http://18.231.120.151/app/enviarEmail.php?nome=${this.nome}&email=${this.email}&assunto=${this.assunto}&desc=${this.desc}`,true)
+    eemail.open("GET",`http://${this.url}/app/enviarEmail.php?nome=${this.nome}&email=${this.email}&assunto=${this.assunto}&desc=${this.desc}`,true)
     eemail.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     eemail.send();
 
