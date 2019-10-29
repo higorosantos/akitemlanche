@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {NavController,LoadingController} from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { loadingController } from '@ionic/core';
 var error;
-var resposta;
+var loading;
+
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.page.html',
@@ -39,10 +41,11 @@ export class ContatoPage implements OnInit {
           console.log(this.responseText)
             if(this.responseText == "enviado"){
               error = false;
-              resposta = 1;
+              
+
             }else{
               error = true;
-              resposta = 1;
+             
             }
         }
     };     
@@ -56,13 +59,7 @@ export class ContatoPage implements OnInit {
     }).then((overlay)=> {
        this.loading = overlay
        this.loading.present()
-       console.log(resposta)
     })
-   if(resposta == 1){
-      
-      this.loading.dismiss();
-      this.alertShow();
-    }
 
   }
  async alertShow(){
