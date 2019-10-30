@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfissionalInserirPage } from './profissional-inserir.page';
+import { LanchoneteInserirPage } from './lanchonete-inserir.page';
 
-describe('ProfissionalInserirPage', () => {
-  let component: ProfissionalInserirPage;
-  let fixture: ComponentFixture<ProfissionalInserirPage>;
+describe('LanchoneteInserirPage', () => {
+  let component: LanchoneteInserirPage;
+  let fixture: ComponentFixture<LanchoneteInserirPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfissionalInserirPage ],
+      declarations: [ LanchoneteInserirPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfissionalInserirPage);
+    fixture = TestBed.createComponent(LanchoneteInserirPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
