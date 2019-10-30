@@ -20,7 +20,7 @@ export class AppComponent {
     {
       title: 'Lanchonetes',
       url: '/list',
-      icon: 'list'
+      icon: 'pizza'
     },
     {
       title: 'Contato',
