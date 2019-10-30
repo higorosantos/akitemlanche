@@ -36,7 +36,13 @@ export class AppComponent {
       title: 'Políticas de Privacidade',
       url: '/politicas',
       icon: 'book'
+    },
+    {
+      title:'Cadastrar',
+      url:'/lanchonete-inserir',
+      icon:'contact'
     }
+
   ];
 
   constructor(
