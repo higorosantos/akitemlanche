@@ -25,7 +25,7 @@ export class LanchoneteInserirPage implements OnInit {
    
     submitForm() {
       this.apiService.createItem(this.data).subscribe((response) => {
-        this.router.navigate(['Lanchonete-list']);
+        this.router.navigate(['lanchonete-list']);
       });
    
     }
