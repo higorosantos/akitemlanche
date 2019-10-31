@@ -19,12 +19,17 @@ export class AppComponent {
     {
       title: 'Lanchonetes',
       url: '/list',
-      icon: 'list'
+      icon: 'pizza'
+    },
+    {
+      title:'Cadastrar',
+      url:'/lanchonete-inserir',
+      icon:'contact'
     },
     {
       title: 'Contato',
       url: '/contato',
-      icon: 'contact'
+      icon: 'chatboxes'
     },
     {
       title: 'Quem Somos',
@@ -35,11 +40,6 @@ export class AppComponent {
       title: 'Políticas de Privacidade',
       url: '/politicas',
       icon: 'book'
-    },
-    {
-      title:'Cadastrar',
-      url:'/lanchonete-inserir',
-      icon:'contact'
     }
 
   ];
