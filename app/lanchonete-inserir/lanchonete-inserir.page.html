@@ -1,22 +1,35 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
     <ion-title>Nova Lanchonete</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+  <ion-card-header>
+  <ion-card-subtitle>Cadastre seu estabelecimento</ion-card-subtitle>
+  <ion-card-title>Insira seus dados</ion-card-title>
+  </ion-card-header>
+  <ion-card>
   <ion-item>
-      <ion-label>Id </ion-label>
+    <ion-icon slot="start" color="medium" name="finger-print"></ion-icon>
+      <ion-label>Id: </ion-label>
       <ion-input type="text"[(ngModel)]="data.id" required></ion-input>
   </ion-item>
 
 
 <ion-item>
+  <ion-icon slot="start" color="medium" name="pizza"></ion-icon>
 <ion-label> Nome da Lanchonete: </ion-label>
   <ion-input type="text"[(ngModel)]="data.nome" required></ion-input>
 </ion-item>
 
 <ion-item>
+  <ion-icon slot="start" color="medium" name="cafe"></ion-icon>
 <ion-label>Tipo de Comida: </ion-label>
       <ion-select placeholder="Selecione sua profissão" [(ngModel)]="data.culinaria" required>
         <ion-select-option value="salgado">Salgado</ion-select-option>
@@ -28,10 +41,9 @@
   <ion-item>
     <ion-button (click)="submitForm()">Enviar</ion-button>
 
-    <ion-button [routerLink]="['/home']">
-      Voltar
-    </ion-button>
   </ion-item>
+
+</ion-card>
 
 
 </ion-content>
