@@ -1,37 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Cadatra-se</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <ion-card>
+    <ion-card style="margin-top:15em">
+  
     <ion-item>
-
-
-      <ion-input type="text" [(ngModel)]="data.id" required placeholder="Id:"></ion-input>
-    </ion-item>
-
-
-    <ion-item>
-
-      <ion-input type="text" [(ngModel)]="data.nome" required placeholder=" Nome Completo"></ion-input>
+      <ion-icon slot="start" color="medium" name="Contact"></ion-icon>
+    <ion-label> Nome: </ion-label>
+      <ion-input type="text"[(ngModel)]="data.nome" required></ion-input>
     </ion-item>
     <ion-item>
-
-
-      <ion-input type="password" [(ngModel)]="data.senha" required placeholder="Digite sua Senha"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input type="text" [(ngModel)]="data.email" required placeholder="Digite seu E-mail"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-button (click)="submitForm()">Confirmar</ion-button>
-
-    </ion-item>
-
-  </ion-card>
-
+        <ion-icon slot="start" color="medium" name="key"></ion-icon>
+      <ion-label> Senha: </ion-label>
+        <ion-input type="password"[(ngModel)]="data.senha" required></ion-input>
+      </ion-item>
+      <ion-item>
+       <ion-item>
+          <ion-icon slot="start" color="medium" name="Contact"></ion-icon>
+        <ion-label> Email: </ion-label>
+          <ion-input type="text"[(ngModel)]="data.email" required></ion-input>
+      </ion-item>
+      <ion-item>
+       
+        
+    <ion-button routerLink="/caduser">Cadastre-se</ion-button>
+      </ion-item>
+    
+    </ion-card>
 
 </ion-content>
