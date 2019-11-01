@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
   }
     
   ngOnInit() {
+    document.getElementById("myMenu").style.visibility = "hidden";
     
   }
   logar() {
@@ -33,6 +34,8 @@ export class LoginPage implements OnInit {
        sessionStorage.setItem("Nome",`${this.usuario[0].nome}`)
        if(this.usuario[0] != ""){
           document.getElementById("myMenu").style.visibility = "visible";
+          this.email = ""
+          this.senha = ""
          this.rota.navigate(["home"])
          
        }

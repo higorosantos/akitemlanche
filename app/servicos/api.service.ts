@@ -10,7 +10,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
  
   // API path
-  base_path = 'http://localhost:3000/Lanchonete';
+  base_path = 'http://localhost:3000/Lanchonetes';
  
   constructor(private http: HttpClient) { }
  
