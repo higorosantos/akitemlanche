@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>caduser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-item>
+          <ion-icon slot="start" color="medium" name="finger-print"></ion-icon>
+            
+            <ion-input type="text"[(ngModel)]="id" required placeholder="Id:"></ion-input>
+        </ion-item>
+      
+      
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="pizza"></ion-icon>
+        <ion-input type="text"[(ngModel)]="nome" required placeholder=" Nome da Lanchonete:"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-icon slot="start" color="medium" name="pizza"></ion-icon>
+        <ion-label> Descrição: </ion-label>
+          <ion-input type="text"[(ngModel)]="descricao" required></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="cafe"></ion-icon>
+      <ion-label>Culinaria: </ion-label>
+            <ion-select placeholder="Selecione sua profissão" [(ngModel)]="culinaria" required>
+              <ion-select-option value="salgado">Salgado</ion-select-option>
+              <ion-select-option value="doce">Doce</ion-select-option>
+              <ion-select-option value="misto">Misto</ion-select-option>
+            </ion-select>
+          </ion-item>
+      
+        <ion-item>
+          <ion-button (click)="submitForm()">Enviar</ion-button>
+      
+        </ion-item>
+      
+      </ion-card>
+      
+
+</ion-content>
