@@ -49,9 +49,9 @@ export class ApiService {
   }
  
  
-  getItem(id): Observable<Lanchonete> {
+  getItem(nome): Observable<Lanchonete> {
     return this.http
-      .get<Lanchonete>(this.base_path + '/' + id)
+      .get<Lanchonete>(`${this.base_path}?nome=${nome}`)
       .pipe(
         retry(2),
         catchError(this.handleError)

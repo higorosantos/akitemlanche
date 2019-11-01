@@ -13,7 +13,7 @@ import {ApiService} from '../servicos/api.service';
 export class ListPage implements OnInit {
     @ViewChild(IonInfiniteScroll,{static:false})infiniteScroll: IonInfiniteScroll;
     ;
-  
+  pesquisa: String = ""
   dataList:any;
   lanchonetes: any;
   constructor(public api:ApiService) {
@@ -31,6 +31,18 @@ export class ListPage implements OnInit {
        this.lanchonetes = response;
      })
    }
+   procurar(nome){
+     if(this.pesquisa == ""){
+       this.getAllLanchonetes()
+     }
+     else{
+     this.api.getItem(nome).subscribe(response => {
+       console.log(response);
+       this.lanchonetes = response;
+     }
+    
+     )}
+    }
    loadData(event) {
     setTimeout(() => {
     
