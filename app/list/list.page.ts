@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild} from '@angular/core';
+import { IonInfiniteScroll } from '@ionic/angular';
+
+import {Router} from '@angular/router';
+import {Lanchonete} from '../models/lanchonete';
+import {ApiService} from '../servicos/api.service';
 
 @Component({
   selector: 'app-list',
@@ -6,34 +11,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
+    @ViewChild(IonInfiniteScroll,{static:false})infiniteScroll: IonInfiniteScroll;
+    ;
+  
+  dataList:any;
+  lanchonetes: any;
+  constructor(public api:ApiService) {
+    this.lanchonetes = [];
+  
+  }
+    
+  ngOnInit() {
+    this.getAllLanchonetes()
+  }
+  getAllLanchonetes() {
+    //Lista todos os profissionais
+     this.api.getList().subscribe(response => {
+       console.log(response);
+       this.lanchonetes = response;
+     })
+   }
+   loadData(event) {
+    setTimeout(() => {
+    
+      event.target.complete();
+
+      // App logic to determine if all data is loaded
+      // and disable the infinite scroll
+      if (this.lanchonetes.length == 1000) {
+        event.target.disabled = true;
+      }
+    }, 500);
   }
 
-  ngOnInit() {
+  toggleInfiniteScroll() {
+    this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+
 }

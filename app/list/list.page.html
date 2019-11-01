@@ -1,27 +1,23 @@
-<ion-header>
-  <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      List
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Lanchonetes</ion-label>
+      </ion-list-header>
+      <ion-searchbar></ion-searchbar>
+      <ion-item *ngFor="let item of lanchonetes">
+        <ion-avatar slot="start"><img src="https://vignette.wikia.nocookie.net/naruto/images/3/33/Naruto_Uzumaki_%28Parte_I_-_HD%29.png/revision/latest/scale-to-width-down/310?cb=20160316113315&path-prefix=pt-br"></ion-avatar>
+        <ion-label>
+          <h2>{{item.nome}}</h2>
+          <h3>Nota da Lanchonete: </h3>
+          <p>Descrição: {{item.descricao}}</p>
+          <p>Categoria: {{item.culinaria}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
 </ion-content>

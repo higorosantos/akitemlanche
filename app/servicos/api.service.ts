@@ -67,6 +67,15 @@ export class ApiService {
         catchError(this.handleError)
       )
   }
+  getDestaque(): Observable<Lanchonete>{
+    return this.http
+    .get<Lanchonete>(this.base_path + '?destaque=true' )
+    .pipe(
+      retry(2),
+      catchError(this.handleError)
+    )
+}
+
  
 
   updateItem(id, item): Observable<Lanchonete> {
