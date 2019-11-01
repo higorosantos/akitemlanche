@@ -138,6 +138,18 @@
       "nome": "Higor",
       "senha": "123",
       "email": "higorosantos@gmail.com"
+    },
+    {
+      "id": "1572648721962",
+      "nome": "ruan",
+      "senha": "123",
+      "email": "ruan.thow3@gmail.com"
+    },
+    {
+      "id": "1572648810903",
+      "nome": "eliel",
+      "senha": "123",
+      "email": "eliel@gmail.com"
     }
-  ]
+  ] 
 }
