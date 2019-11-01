@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'usuario-deletar', loadChildren: './usuario-deletar/usuario-deletar.module#UsuarioDeletarPageModule' },
   { path: 'usuario-inserir', loadChildren: './usuario-inserir/usuario-inserir.module#UsuarioInserirPageModule' },
   { path: 'usuario-editar', loadChildren: './usuario-editar/usuario-editar.module#UsuarioEditarPageModule' },
-  { path: 'politicas', loadChildren: './politicas/politicas.module#PoliticasPageModule' },  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+  { path: 'politicas', loadChildren: './politicas/politicas.module#PoliticasPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
 
 
 ];

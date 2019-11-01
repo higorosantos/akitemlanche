@@ -17,7 +17,7 @@
   <ion-card>
 
 <ion-item>
-  <ion-icon slot="start" color="medium" name="pizza"></ion-icon>
+  <ion-icon slot="start" color="medium" name="finger-print"></ion-icon>
 <ion-label> Nome da Lanchonete: </ion-label>
   <ion-input type="text"[(ngModel)]="data.nome" required></ion-input>
 </ion-item>
@@ -28,8 +28,8 @@
   </ion-item>
 <ion-item>
   <ion-icon slot="start" color="medium" name="cafe"></ion-icon>
-<ion-label>Tipo de Comida: </ion-label>
-      <ion-select placeholder="Selecione sua profissão" [(ngModel)]="data.culinaria" required>
+<ion-label>Culinária: </ion-label>
+      <ion-select [(ngModel)]="data.culinaria" required>
         <ion-select-option value="salgado">Salgado</ion-select-option>
         <ion-select-option value="doce">Doce</ion-select-option>
         <ion-select-option value="misto">Misto</ion-select-option>
