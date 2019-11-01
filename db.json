@@ -40,7 +40,7 @@
       "culinaria": "salgado"
     },
     {
-      "id": 15725669564642791,
+      "id": 15725669564642792,
       "nome": "China1.0",
       "culinaria": "salgado",
       "descricao": "Lanchonete de alta qualidade"
@@ -64,7 +64,7 @@
       "descricao": "Lanchonete de alta qualidade"
     },
     {
-      "id": 91572566932757133,
+      "id": 91572566932757140,
       "nome": "China1.0",
       "culinaria": "salgado",
       "descricao": "Lanchonete de alta qualidade"
@@ -88,7 +88,7 @@
       "culinaria": "salgado"
     },
     {
-      "id": 15725669564642791,
+      "id": 15725669564642792,
       "nome": "China1.0",
       "culinaria": "salgado",
       "descricao": "Lanchonete de alta qualidade"
@@ -112,20 +112,24 @@
       "descricao": "Lanchonete de alta qualidade"
     },
     {
-      "id": 91572566932757133,
+      "id": 91572566932757140,
       "nome": "China1.0",
       "culinaria": "salgado",
       "descricao": "Lanchonete de alta qualidade"
     }
-
   ],
-  "usuarios":[
+  "usuarios": [
     {
-      "id":100,
-      "nome":"Higor",
-      "senha":"123",
-      "email":"higorosantos@gmail.com"
+      "id": 100,
+      "nome": "Higor",
+      "senha": "123",
+      "email": "higorosantos@gmail.com"
+    },
+    {
+      "id": "1572648721962",
+      "nome": "ruan",
+      "senha": "123",
+      "email": "ruan.thow3@gmail.com"
     }
-]
-  
+  ]
 }
