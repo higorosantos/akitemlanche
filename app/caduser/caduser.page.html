@@ -1,27 +1,23 @@
-<ion-content color="primary">
-  <ion-card>
-    <ion-item>
-
-
-      <ion-input type="text" [(ngModel)]="data.id" required placeholder="Id:"></ion-input>
-    </ion-item>
-
+<ion-content color="primary" >
+  <ion-card style="margin-top:10em">
 
     <ion-item>
-
-      <ion-input type="text" [(ngModel)]="data.nome" required placeholder=" Nome Completo"></ion-input>
+      <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+      <ion-input type="text" [(ngModel)]="nome" required placeholder=" Nome Completo"></ion-input>
     </ion-item>
     <ion-item>
 
-
-      <ion-input type="password" [(ngModel)]="data.senha" required placeholder="Digite sua Senha"></ion-input>
+        <ion-icon slot="start" color="medium" name="lock"></ion-icon>
+      <ion-input type="password" [(ngModel)]="senha" required placeholder="Digite sua Senha"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" [(ngModel)]="data.email" required placeholder="Digite seu E-mail"></ion-input>
+        <ion-icon slot="start" color="medium" name="at"></ion-icon>
+      <ion-input type="text" [(ngModel)]="email" required placeholder="Digite seu E-mail"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-button (click)="submitForm()">Confirmar</ion-button>
+      <ion-button routerLink="/login">Retornar</ion-button>
 
     </ion-item>
 
