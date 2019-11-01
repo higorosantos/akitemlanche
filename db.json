@@ -118,5 +118,14 @@
       "descricao": "Lanchonete de alta qualidade"
     }
 
-  ]
+  ],
+  "usuarios":[
+    {
+      "id":100,
+      "nome":"Higor",
+      "senha":"123",
+      "email":"higorosantos@gmail.com"
+    }
+]
+  
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-loading-screen',
@@ -8,18 +9,26 @@ import { Router } from '@angular/router';
 })
 export class LoadingScreenPage implements OnInit {
   
-  constructor( public router: Router) { 
-   
+  constructor( public router: Router,public Menu:MenuController) {
+    
+    this.Menu.enable(false, 'myMenu');
   }
   
 
   ngOnInit() {
+   
 
 
-  }
+    }
+
 
 tempo = setTimeout(()=> {
-  this.router.navigate(["home"])
+  if(sessionStorage.getItem("acesso") == null){
+    this.router.navigate(["login"])
+  }
+  else{
+    this.router.navigate(["home"])
+  }
 }, 1000);
   
 }

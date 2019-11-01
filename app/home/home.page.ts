@@ -17,7 +17,8 @@ export class HomePage {
   }
 
   getAllDestaques() {
-    //Lista todos os profissionais
+    //Lista todos as lanchonetes em destaque
+    
      this.api.getDestaque().subscribe(response => {
        console.log(response);
        this.lanchonetesDestaque = response;
