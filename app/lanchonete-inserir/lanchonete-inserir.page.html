@@ -17,20 +17,19 @@
   <ion-card>
   <ion-item>
     <ion-icon slot="start" color="medium" name="finger-print"></ion-icon>
-      <ion-label>Id: </ion-label>
-      <ion-input type="text"[(ngModel)]="data.id" required></ion-input>
+      
+      <ion-input type="text"[(ngModel)]="data.id" required placeholder="Id:"></ion-input>
   </ion-item>
 
 
 <ion-item>
   <ion-icon slot="start" color="medium" name="pizza"></ion-icon>
-<ion-label> Nome da Lanchonete: </ion-label>
-  <ion-input type="text"[(ngModel)]="data.nome" required></ion-input>
+  <ion-input type="text"[(ngModel)]="data.nome" required placeholder=" Nome da Lanchonete:"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-icon slot="start" color="medium" name="cafe"></ion-icon>
-<ion-label>Tipo de Comida: </ion-label>
+<ion-label>Culinaria: </ion-label>
       <ion-select placeholder="Selecione sua profissão" [(ngModel)]="data.culinaria" required>
         <ion-select-option value="salgado">Salgado</ion-select-option>
         <ion-select-option value="doce">Doce</ion-select-option>
