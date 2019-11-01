@@ -55,6 +55,7 @@ export class AppComponent {
   }
   deslogar(){
     sessionStorage.clear();
+    document.getElementById("myMenu").style.visibility = "hidden";
     this.rota.navigate(["login"])
 
   }

@@ -24,10 +24,14 @@ export class LoadingScreenPage implements OnInit {
 
 tempo = setTimeout(()=> {
   if(sessionStorage.getItem("acesso") == null){
+    document.getElementById("myMenu").style.visibility = "hidden";
     this.router.navigate(["login"])
+    
   }
   else{
+    document.getElementById("myMenu").style.visibility = "visible";
     this.router.navigate(["home"])
+    
   }
 }, 1000);
   
