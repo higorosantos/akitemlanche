@@ -28,7 +28,8 @@ const routes: Routes = [
   { path: 'usuario-editar', loadChildren: './usuario-editar/usuario-editar.module#UsuarioEditarPageModule' },
   { path: 'politicas', loadChildren: './politicas/politicas.module#PoliticasPageModule' },
   { path: 'alanchonete', loadChildren: './alanchonete/alanchonete.module#AlanchonetePageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'account', loadChildren: './account/account.module#AccountPageModule' }
+
 
 ];
 
