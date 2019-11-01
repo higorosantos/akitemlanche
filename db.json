@@ -116,6 +116,20 @@
       "nome": "China1.0",
       "culinaria": "salgado",
       "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572651795723,
+      "destaque": false,
+      "nome": "CULINARIA",
+      "descricao": "MEUDEUS",
+      "culinaria": "doce"
+    },
+    {
+      "id": 1572651850457,
+      "destaque": false,
+      "nome": "teste",
+      "descricao": "teste",
+      "culinaria": "misto"
     }
   ],
   "usuarios": [
@@ -137,5 +151,5 @@
       "senha": "123",
       "email": "eliel@gmail.com"
     }
-  ]
+  ] 
 }

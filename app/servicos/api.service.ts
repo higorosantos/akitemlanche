@@ -10,7 +10,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class ApiService {
  
   // API path
-  base_path = 'http://localhost:3000/Lanchonete';
+  base_path = 'http://localhost:3000/Lanchonetes';
  
   constructor(private http: HttpClient) { }
  
@@ -49,9 +49,9 @@ export class ApiService {
   }
  
  
-  getItem(id): Observable<Lanchonete> {
+  getItem(nome): Observable<Lanchonete> {
     return this.http
-      .get<Lanchonete>(this.base_path + '/' + id)
+      .get<Lanchonete>(`${this.base_path}?nome=${nome}`)
       .pipe(
         retry(2),
         catchError(this.handleError)

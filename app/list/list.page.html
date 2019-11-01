@@ -3,7 +3,7 @@
       <ion-list-header>
         <ion-label>Lanchonetes</ion-label>
       </ion-list-header>
-      <ion-searchbar></ion-searchbar>
+      <ion-searchbar [(ngModel)]="pesquisa" (keyup)="procurar(pesquisa)"></ion-searchbar>
       <ion-item *ngFor="let item of lanchonetes">
         <ion-avatar slot="start"><img src="https://vignette.wikia.nocookie.net/naruto/images/3/33/Naruto_Uzumaki_%28Parte_I_-_HD%29.png/revision/latest/scale-to-width-down/310?cb=20160316113315&path-prefix=pt-br"></ion-avatar>
         <ion-label>
