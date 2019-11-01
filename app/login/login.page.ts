@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from '../servicos/cliente.service';
 import { Router } from '@angular/router';
-var verificar = sessionStorage.getItem('acesso');
+var status = sessionStorage.getItem("acesso");
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -32,7 +32,9 @@ export class LoginPage implements OnInit {
        sessionStorage.setItem("idUsuario",`${this.usuario[0].id}`)
        sessionStorage.setItem("Nome",`${this.usuario[0].nome}`)
        if(this.usuario[0] != ""){
+          document.getElementById("myMenu").style.visibility = "visible";
          this.rota.navigate(["home"])
+         
        }
      })
      
