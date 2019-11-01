@@ -27,7 +27,9 @@ const routes: Routes = [
   { path: 'usuario-inserir', loadChildren: './usuario-inserir/usuario-inserir.module#UsuarioInserirPageModule' },
   { path: 'usuario-editar', loadChildren: './usuario-editar/usuario-editar.module#UsuarioEditarPageModule' },
   { path: 'politicas', loadChildren: './politicas/politicas.module#PoliticasPageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' }
+  { path: 'alanchonete', loadChildren: './alanchonete/alanchonete.module#AlanchonetePageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'caduser', loadChildren: './caduser/caduser.module#CaduserPageModule' }
 
 
 ];
