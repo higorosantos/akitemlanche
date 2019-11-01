@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
