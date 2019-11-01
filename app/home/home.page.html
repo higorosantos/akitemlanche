@@ -1,4 +1,5 @@
 <ion-header>
+  
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -21,40 +22,17 @@
       </ion-card-content>
     </ion-card>
     <ion-list>
-      <ion-list-header>
-        <ion-label>Lanchonetes</ion-label>
-      </ion-list-header>
-      <ion-item>
-        <ion-avatar slot="start"><img src="/assets/image2vector.svg"></ion-avatar>
-        <ion-label>
-          <h2>Nome da Lanchonete</h2>
-          <h3>Nota da Lanchonete</h3>
-          <p>Descrição (Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi cumque consequatur dolore non ea quam! Commodi dolorum, architecto sint reprehenderit fuga velit quas ipsam molestiae dolores alias ducimus est vero!)</p>
-        </ion-label>
-      </ion-item>
-      <ion-item>
-          <ion-avatar slot="start"><img src="/assets/image2vector.svg"></ion-avatar>
+        <ion-list-header>
+          <ion-label>Lanchonetes em Destaque</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let item of lanchonetesDestaque">
+          <ion-avatar slot="start"><img src="https://vignette.wikia.nocookie.net/naruto/images/3/33/Naruto_Uzumaki_%28Parte_I_-_HD%29.png/revision/latest/scale-to-width-down/310?cb=20160316113315&path-prefix=pt-br"></ion-avatar>
           <ion-label>
-            <h2>Nome da Lanchonete</h2>
-            <h3>Nota da Lanchonete</h3>
-            <p>Descrição (Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi cumque consequatur dolore non ea quam! Commodi dolorum, architecto sint reprehenderit fuga velit quas ipsam molestiae dolores alias ducimus est vero!)</p>
+            <h2>{{item.nome}}</h2>
+            <h3>Nota da Lanchonete: </h3>
+            <p>Descrição: {{item.descricao}}</p>
+            <p>Categoria: {{item.culinaria}}</p>
           </ion-label>
         </ion-item>
-        <ion-item>
-            <ion-avatar slot="start"><img src="/assets/image2vector.svg"></ion-avatar>
-            <ion-label>
-              <h2>Nome da Lanchonete</h2>
-              <h3>Nota da Lanchonete</h3>
-              <p>Descrição (Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi cumque consequatur dolore non ea quam! Commodi dolorum, architecto sint reprehenderit fuga velit quas ipsam molestiae dolores alias ducimus est vero!)</p>
-            </ion-label>
-          </ion-item>
-          <ion-item>
-              <ion-avatar slot="start"><img src="/assets/image2vector.svg"></ion-avatar>
-              <ion-label>
-                <h2>Nome da Lanchonete</h2>
-                <h3>Nota da Lanchonete</h3>
-                <p>Descrição (Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi cumque consequatur dolore non ea quam! Commodi dolorum, architecto sint reprehenderit fuga velit quas ipsam molestiae dolores alias ducimus est vero!)</p>
-              </ion-label>
-            </ion-item>
-    </ion-list>
+      </ion-list>
 </ion-content>

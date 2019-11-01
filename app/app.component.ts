@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -48,11 +49,16 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public rota : Router
   ) {
     this.initializeApp();
   }
+  deslogar(){
+    sessionStorage.clear();
+    this.rota.navigate(["login"])
 
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

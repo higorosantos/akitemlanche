@@ -1,5 +1,10 @@
+
 export class Lanchonete {
-    id: number;
+    
+    id: number ;
     nome: string;
+    url_image: string;
     culinaria: string;
+    descricao: string;
+    destaque: boolean;
 }

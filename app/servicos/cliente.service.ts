@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Lanchonete } from '../models/lanchonete';
+import { Usuario } from '../models/usuario';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
  
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
- 
+export class ClienteService {
+
   // API path
-  base_path = 'http://localhost:3000/Lanchonetes';
- 
+  base_path = 'http://localhost:3000/usuarios';
+
   constructor(private http: HttpClient) { }
  
   // Http Options
@@ -39,9 +39,9 @@ export class ApiService {
  
  
 
-  createItem(item): Observable<Lanchonete> {
+  createItem(item): Observable<Usuario> {
     return this.http
-      .post<Lanchonete>(this.base_path, JSON.stringify(item), this.httpOptions)
+      .post<Usuario>(this.base_path, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -49,9 +49,9 @@ export class ApiService {
   }
  
  
-  getItem(id): Observable<Lanchonete> {
+  getItem(id): Observable<Usuario> {
     return this.http
-      .get<Lanchonete>(this.base_path + '/' + id)
+      .get<Usuario>(this.base_path + '/' + id)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -59,17 +59,17 @@ export class ApiService {
   }
  
  
-  getList(): Observable<Lanchonete> {
+  getList(): Observable<Usuario> {
     return this.http
-      .get<Lanchonete>(this.base_path)
+      .get<Usuario>(this.base_path)
       .pipe(
         retry(2),
         catchError(this.handleError)
       )
   }
-  getDestaque(): Observable<Lanchonete>{
+  login(email,senha): Observable<Usuario>{
     return this.http
-    .get<Lanchonete>(this.base_path + '?destaque=true' )
+    .get<Usuario>(`${this.base_path}?email=${email}&senha=${senha}`)
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -78,9 +78,9 @@ export class ApiService {
 
  
 
-  updateItem(id, item): Observable<Lanchonete> {
+  updateItem(id, item): Observable<Usuario> {
     return this.http
-      .put<Lanchonete>(this.base_path + '/' + id, JSON.stringify(item), this.httpOptions)
+      .put<Usuario>(this.base_path + '/' + id, JSON.stringify(item), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -89,7 +89,7 @@ export class ApiService {
 
   alterarItem(id) {
     return this.http
-      .delete<Lanchonete>(this.base_path + '/' + id, this.httpOptions)
+      .delete<Usuario>(this.base_path + '/' + id, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -99,11 +99,11 @@ export class ApiService {
   
   deleteItem(id) {
     return this.http
-      .delete<Lanchonete>(this.base_path + '/' + id, this.httpOptions)
+      .delete<Usuario>(this.base_path + '/' + id, this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
       )
   }
- 
+
 }

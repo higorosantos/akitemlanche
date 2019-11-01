@@ -3,7 +3,129 @@
     {
       "id": 1,
       "nome": "Ki-Lanche",
-      "culinaria": "Rato"
+      "culinaria": "Rato",
+      "descricao": "Lanchonete de alta qualidade",
+      "destaque": true
+    },
+    {
+      "id": "2",
+      "nome": "China 2.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade",
+      "destaque": true
+    },
+    {
+      "id": 183,
+      "nome": "Teste",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 933,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572566533256,
+      "nome": "Reizinho",
+      "descricao": "Caro demais",
+      "culinaria": "salgado",
+      "destaque": true
+    },
+    {
+      "id": 1572566956456791,
+      "nome": "Tia da coxinha",
+      "descricao": "Coxinhas",
+      "culinaria": "salgado"
+    },
+    {
+      "id": 15725669564642791,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 5646565498,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572568732791,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572566932791,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 91572566932757133,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 933,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572566533256,
+      "nome": "Reizinho",
+      "descricao": "Caro demais",
+      "culinaria": "salgado"
+    },
+    {
+      "id": 1572566956456791,
+      "nome": "Tia da coxinha",
+      "descricao": "Coxinhas",
+      "culinaria": "salgado"
+    },
+    {
+      "id": 15725669564642791,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 5646565498,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572568732791,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 1572566932791,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
+    },
+    {
+      "id": 91572566932757133,
+      "nome": "China1.0",
+      "culinaria": "salgado",
+      "descricao": "Lanchonete de alta qualidade"
     }
-  ]
+
+  ],
+  "usuarios":[
+    {
+      "id":100,
+      "nome":"Higor",
+      "senha":"123",
+      "email":"higorosantos@gmail.com"
+    }
+]
+  
 }

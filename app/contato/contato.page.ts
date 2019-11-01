@@ -3,8 +3,10 @@ import {NavController,LoadingController} from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { loadingController } from '@ionic/core';
-var error;
-var loading;
+
+var error = null;
+
+
 
 @Component({
   selector: 'app-contato',
@@ -19,13 +21,14 @@ export class ContatoPage implements OnInit {
   desc: String;
   url : String = "18.231.120.151";
   private loading;
-
+  
   constructor(public Nav: NavController, public Loading: LoadingController,public Alert: AlertController,public rota: Router) { }
-
+   
   ngOnInit() {
   }
 
   limparForm(){
+    
     this.nome = ""
     this.email = ""
     this.assunto = ""
@@ -33,22 +36,39 @@ export class ContatoPage implements OnInit {
   }
   
   submitForm(){
+ 
     var eemail = new XMLHttpRequest()
     eemail.onreadystatechange = function(){
           
        if(this.readyState == 4 && this.status == 200){
          
+         
           console.log(this.responseText)
             if(this.responseText == "enviado"){
+            
               error = false;
               
 
             }else{
+             
               error = true;
+              
              
             }
         }
-    };     
+    };  
+     setTimeout(()=>{
+       if(error == null){
+         error = false;
+         this.loading.dismiss()
+         this.alertShow()
+       }else{
+         error = true;
+         this.loading.dismiss()
+         this.alertShow()
+
+       }
+    },2000)  
     eemail.open("GET",`http://${this.url}/app/enviarEmail.php?nome=${this.nome}&email=${this.email}&assunto=${this.assunto}&desc=${this.desc}`,true)
     eemail.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     eemail.send();
@@ -60,6 +80,8 @@ export class ContatoPage implements OnInit {
        this.loading = overlay
        this.loading.present()
     })
+    
+
 
   }
  async alertShow(){
@@ -71,7 +93,10 @@ export class ContatoPage implements OnInit {
       
     })
     alerta.present();
+    
     this.rota.navigate(["home"])
+    error = null;
+    this.limparForm();
   }
   else{
     const alerta = await this.Alert.create({
@@ -79,6 +104,7 @@ export class ContatoPage implements OnInit {
       buttons: ["OK"]
     })
     alerta.present();
+    error = null;
   }
      
      
