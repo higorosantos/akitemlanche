@@ -47,11 +47,16 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public rota : Router
   ) {
     this.initializeApp();
   }
+  deslogar(){
+    sessionStorage.clear();
+    this.rota.navigate(["login"])
 
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
