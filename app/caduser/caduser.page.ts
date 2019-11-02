@@ -25,7 +25,7 @@ export class CaduserPage implements OnInit {
   }
     submitForm(){
       this.cliente.createItem(this.data).subscribe((response)=>{
-        this.router.navigate(['home'])
+        this.router.navigate(['login'])
       })
     }
 }
